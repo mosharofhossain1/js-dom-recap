@@ -18,3 +18,21 @@ onBtn.addEventListener('click', function(){
 offBtn.addEventListener('click', function(){
     light.src = lights.off
 })
+
+
+// box design
+
+const box = document.getElementById('box');
+const btn = document.getElementById('changeColor')
+
+const colors = ['red', 'green', 'pink', 'tomatto', 'yellow'];
+
+btn.addEventListener('click', function(){
+    const randomColor = Math.floor(Math.random() * 5)
+    box.style.backgroundColor = colors[randomColor]
+})
+
+setInterval(()=>{
+    const randomColor = Math.floor(Math.random() * 5)
+    box.style.backgroundColor = colors[randomColor]
+}, 500)
