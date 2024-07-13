@@ -19,11 +19,11 @@ const secretMsg = ()=>{
     message.innerText = msg;
 } */
 
-// Events 
-// Event delegation
-// Event propagation
-// Stop Event Propagation
-// Stop immadite Propagation
+// 1. Events 
+// 2. Event delegation
+// 3. Event propagation
+// 4. Stop Event Propagation
+// 5. Stop immadite Propagation
 
 /* const parent = document.querySelector('.parent');
 const child = document.querySelector('.child');
@@ -39,14 +39,14 @@ const chaildHandler = ()=>{
 }
 
 const itemsHandler = ()=>{
-    console.log('ul is clicked')
+    console.log('ul is clicked');
 }
 
 const listHandler = ()=>{
-    console.log('li is clickded')
+    console.log('li is clickded');
 }
 
-parent.addEventListener('click', parentHandler)
+parent.addEventListener('click', parentHandler);
 child.addEventListener('click', chaildHandler);
 items.addEventListener('click', itemsHandler);
 list.addEventListener('click', listHandler);
@@ -64,12 +64,10 @@ const addBtn = document.getElementById('addBtn');
 //     })
 // })
 
-
-list.addEventListener('click', (e)=>{
-    console.log(e.target);
-   const li = e.target;
+const removeElement = (e) =>{
+    const li = e.target;
    list.removeChild(li);
-});
+}
 
 const addHandler = ()=>{
     const li = document.createElement('li');
@@ -77,5 +75,7 @@ const addHandler = ()=>{
     list.append(li);
 }
 
+list.addEventListener('click', removeElement);
 addBtn.addEventListener('click', addHandler);
+
 
