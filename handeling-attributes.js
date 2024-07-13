@@ -36,3 +36,4 @@ setInterval(()=>{
     const randomColor = Math.floor(Math.random() * 5)
     box.style.backgroundColor = colors[randomColor]
 }, 500)
+
